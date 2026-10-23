@@ -1,0 +1,194 @@
+/* ============================================
+   HERO
+   Mobile first: 375px base
+   ============================================ */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  background-image: url("assets/main-banner.png");
+  background-size: cover;
+  background-position: 60% center;
+  background-repeat: no-repeat;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Gradient overlay — mobile: top to bottom */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.00005) -1.42%,
+    rgba(0, 0, 0, 0.5) 49.1%
+  );
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* Wave — sits above everything */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 32px;
+  background-image: url("assets/banner-wave.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 0 24px 56px;
+}
+
+.hero__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 0 0 12px;
+  max-width: 220px;
+}
+
+.hero__text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #fff;
+  margin: 0 0 20px;
+  max-width: 280px;
+}
+
+/* ---- Button ---- */
+.button {
+  display: inline-block;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+  background: #DE6C17;
+  padding: 12px 33px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #c25c11;
+}
+
+
+/* ============================================
+   TAB TALL — 724px and up
+   Gradient flips to horizontal, text moves to centre-left
+   ============================================ */
+@media (min-width: 724px) {
+  .hero {
+    align-items: center;
+    min-height: 460px;
+    background-position: 70% center;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.00005) 0%,
+      rgba(0, 0, 0, 0.5) 65.03%
+    );
+  }
+
+  .hero::after {
+    height: 40px;
+  }
+
+  .hero__inner {
+    padding: 0 8%;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    margin-bottom: 14px;
+    max-width: 400px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    margin-bottom: 22px;
+    max-width: 320px;
+  }
+}
+
+
+/* ============================================
+   TAB WIDE — 1024px and up
+   ============================================ */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero::after {
+    height: 50px;
+  }
+
+  .hero__inner {
+    padding: 0 10%;
+  }
+
+  .hero__title {
+    font-size: 40px;
+    max-width: 440px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    max-width: 360px;
+  }
+}
+
+
+/* ============================================
+   DESKTOP — 1440px and up
+   ============================================ */
+@media (min-width: 1440px) {
+  .hero {
+    min-height: 601px;
+  }
+
+  .hero::after {
+    height: 60px;
+  }
+
+  .hero__inner {
+    padding: 0 15%;
+  }
+
+  .hero__title {
+    font-size: 45px;
+    margin-bottom: 16px;
+    max-width: 480px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    margin-bottom: 24px;
+    max-width: 380px;
+  }
+}
