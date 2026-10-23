@@ -145,6 +145,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     margin-bottom: 22px;
     max-width: 320px;
   }
+
 }
 
 
@@ -235,7 +236,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 24px;
   line-height: 140%;
   margin: 0 auto;
-  max-width: 300px;
+  margin-bottom: 70px;
 }
 
 /* ---- Card grid: stacked, vertical cards ---- */
@@ -322,8 +323,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   }
 
   .services__text {
-    max-width: 520px;
     font-size: 18px;
+    font-family: Quicksand;
+    font-style: Medium;
+
   }
 
   .card {
@@ -346,6 +349,10 @@ ul { list-style: none; margin: 0; padding: 0; }
     font-weight: 500;
     font-size: 24px;
   }
+
+  .services__break {
+    display: none;
+  }
 }
 
 
@@ -354,7 +361,7 @@ ul { list-style: none; margin: 0; padding: 0; }
    ============================================ */
 @media (min-width: 1024px) {
   .services {
-    padding: 48px 60px 72px;
+    padding: 48px 90px 72px;
   }
 
   .card__image {
@@ -363,6 +370,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 
   .card__body {
     padding: 24px;
+  }
+
+  .services__break {
+    display: block;
   }
 }
 
