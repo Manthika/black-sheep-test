@@ -1,4 +1,16 @@
 /* ============================================
+   BASE
+   ============================================ */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+img { max-width: 100%; display: block; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+
+/* ============================================
    HERO
    Mobile first: 375px base
    ============================================ */
@@ -190,5 +202,202 @@
     font-size: 18px;
     margin-bottom: 24px;
     max-width: 380px;
+  }
+}
+
+
+/* ============================================
+   SERVICES — mobile first (375px)
+   ============================================ */
+.services {
+  padding: 32px 24px 56px;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.services__intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.services__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+}
+
+.services__text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* ---- Card grid: stacked, vertical cards ---- */
+.card-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 8px 0px #00000033;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  margin: 0 0 10px;
+}
+
+.card__text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #DE6C17;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: gap 0.2s ease;
+}
+
+.card__link:hover,
+.card__link:focus-visible {
+  gap: 10px;
+}
+
+.card__chevron {
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   TAB TALL — 724px and up
+   Cards flip horizontal: image left, text right
+   ============================================ */
+@media (min-width: 724px) {
+  .services {
+    padding: 40px 40px 64px;
+  }
+
+  .services__title {
+    font-size: 36px;
+  }
+
+  .services__text {
+    max-width: 520px;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card__image {
+    width: 40%;
+    height: auto;
+    min-height: 160px;
+  }
+
+  .card__body {
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .card__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+}
+
+
+/* ============================================
+   TAB WIDE — 1024px and up
+   ============================================ */
+@media (min-width: 1024px) {
+  .services {
+    padding: 48px 60px 72px;
+  }
+
+  .card__image {
+    width: 35%;
+  }
+
+  .card__body {
+    padding: 24px;
+  }
+}
+
+
+/* ============================================
+   DESKTOP — 1440px and up
+   Three across, cards vertical again
+   ============================================ */
+@media (min-width: 1440px) {
+  .services {
+    padding: 56px 80px 96px;
+  }
+
+  .services__intro {
+    margin-bottom: 40px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card__body {
+    padding: 20px;
+    justify-content: flex-start;
+  }
+
+  .card__text {
+    font-size: 14px;
   }
 }
