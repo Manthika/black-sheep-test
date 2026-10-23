@@ -232,7 +232,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .services__text {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 140%;
   margin: 0 auto;
   max-width: 300px;
@@ -270,7 +270,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .card__title {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 100%;
   margin: 0 0 10px;
 }
@@ -278,7 +278,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .card__text {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 140%;
   margin: 0 0 14px;
   flex: 1;
@@ -290,7 +290,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   gap: 6px;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 100%;
   color: #DE6C17;
   text-decoration: none;
@@ -323,6 +323,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 
   .services__text {
     max-width: 520px;
+    font-size: 18px;
   }
 
   .card {
@@ -343,6 +344,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .card__title {
     font-family: "Inter", sans-serif;
     font-weight: 500;
+    font-size: 24px;
   }
 }
 
@@ -397,7 +399,4 @@ ul { list-style: none; margin: 0; padding: 0; }
     justify-content: flex-start;
   }
 
-  .card__text {
-    font-size: 14px;
-  }
 }
